@@ -1,0 +1,92 @@
+/* src/App.css */
+
+/* Import Voyantis-like fonts if available */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif; /* Use a modern sans-serif font */
+  background-color: rgb(242, 240, 238); /* Light grey background */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #003246; /* Dark green header background */
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+main {
+  margin-top: 20px;
+}
+
+.queue-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.queue-list li {
+  background-color: #ffffff; /* White background for list items */
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background-color: red; /* Teal button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: #003246; /* Default button background color */
+  color: white;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white; /* Darker shade for hover effect */
+  border-color: #003246; /* Border color on hover */
+  color: #003246;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+.selected-queue {
+  margin-top: 20px;
+}
+
+.message {
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
