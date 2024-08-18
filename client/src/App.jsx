@@ -1,6 +1,8 @@
 // src/App.jsx
 import React, { useEffect, useState } from 'react';
 import './App.css';  // Custom styling
+import Queue from './Queue';
+import Message from './Message';
 
 function App() {
   const [queues, setQueues] = useState([]);
@@ -43,8 +45,6 @@ function App() {
     }
   };
 
-
-  console.log({queues});
   
   return (
     <div className="container">
@@ -55,24 +55,14 @@ function App() {
         <section className="queue-list">
           <h2>Available Queues</h2>
           <ul>
-            {queues.map((queue) => (
-              <li key={queue.name}>
-                {queue.name} - {queue.messageCount} messages
-                <button className='btn' onClick={() => setSelectedQueue(queue.name)}>Select</button>
-              </li>
-            ))}
+            {queues.map((queue) => <Queue key={queue.name} queue={queue} onClick={(name) => setSelectedQueue(name)}/>)}
           </ul>
         </section>
         {selectedQueue && (
           <section className="selected-queue">
             <h2>Selected Queue: {selectedQueue}</h2>
             <button className='btn' onClick={handleFetchMessage}>Go</button>
-            {message && (
-              <div className="message">
-                <h3>Message:</h3>
-                <p>{message.message}</p>
-              </div>
-            )}
+            {message && <Message message={message}/>}
           </section>
         )}
       </main>
